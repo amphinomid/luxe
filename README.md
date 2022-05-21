@@ -1,2 +1,2 @@
 # sleepwalk-assets
-Storing various assets for sleepwalk project as I fight with Blender and Three.js
+Exploration of a subtly dystopian tech-fueled future! Made with Blender, never got around to transforming it into a web app.
