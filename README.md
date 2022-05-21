@@ -3,5 +3,5 @@ Exploration of a subtly dystopian tech-fueled future. Made with Blender, never g
 
 Screenshots:
 
-![Room with red, green and blue color scheme; bed, electronic plant, robo-cat, screens, VR headset, chair and glass desk](one.png)
-![Another angle of the room: facing desk](two.png)
+![Room with red, green and blue color scheme; bed, electronic plant, robo-cat, screens, VR headset, chair and glass desk](two.png)
+![Another angle of the room: facing desk](one.png)
