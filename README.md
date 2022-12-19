@@ -7,8 +7,3 @@ Credits:
 - Initial experimentation: [GabrielRamirez's threejs-gltf-template](https://github.com/GabrielRamirez/threejs-gltf-template)
 - Later setup: [mrdoob's three.js webgl_loader_draco example](https://github.com/mrdoob/three.js/blob/master/examples/webgl_loader_draco.html)
 - [DRACOLoader.js](), [GLTFLoader.js]() and [three.module.js]() from three.js
-
-Screenshots:
-
-![Room with red, green and blue color scheme; bed, electronic plant, robo-cat, screens, VR headset, chair and glass desk](two.png)
-![Another angle of the room: facing desk](one.png)
