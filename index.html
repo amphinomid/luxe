@@ -75,7 +75,7 @@
 			spotLight.position.set(- 1, 1, 1);
 			scene.add(spotLight);
 
-			gltfLoader.load('https://raw.githubusercontent.com/amphinomid/subtle/main/assets/room.glb', function (walls_and_floor) {
+			gltfLoader.load('https://raw.githubusercontent.com/amphinomid/subtle/main/assets/room.glb', function (room) {
 
 				/*walls_and_floor.computeVertexNormals();
 
@@ -84,8 +84,8 @@
 				mesh.castShadow = true;
 				mesh.receiveShadow = true;
 				scene.add(mesh);*/
-				walls_and_floor.scene.scale.set(0.05,0.05,0.05);
-				scene.add(walls_and_floor.scene);
+				room.scene.scale.set(0.05,0.05,0.05);
+				scene.add(room.scene);
 
 				// Release decoder resources.
 				//gltfLoader.dispose();
