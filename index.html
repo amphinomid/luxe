@@ -77,6 +77,36 @@
 				scene.add(cat.scene);
 			});
 
+			/*gltfLoader.load('https://raw.githubusercontent.com/amphinomid/subtle/main/assets/cat.glb', function (cat) {
+				cat.scene.scale.set(0.1, 0.1, 0.1);
+				scene.add(cat.scene);
+			});*/ // for mirror
+
+			gltfLoader.load('https://raw.githubusercontent.com/amphinomid/subtle/main/assets/monitor_screen.glb', function (monitor) {
+				monitor.scene.scale.set(0.1, 0.1, 0.1);
+				scene.add(monitor.scene);
+			});
+
+			gltfLoader.load('https://raw.githubusercontent.com/amphinomid/subtle/main/assets/speaker.glb', function (speaker) {
+				speaker.scene.scale.set(0.1, 0.1, 0.1);
+				scene.add(speaker.scene);
+			});
+
+			gltfLoader.load('https://raw.githubusercontent.com/amphinomid/subtle/main/assets/table_top.glb', function (table_top) {
+				table_top.scene.scale.set(0.1, 0.1, 0.1);
+				scene.add(table_top.scene);
+			});
+
+			gltfLoader.load('https://raw.githubusercontent.com/amphinomid/subtle/main/assets/tablet.glb', function (tablet) {
+				tablet.scene.scale.set(0.1, 0.1, 0.1);
+				scene.add(tablet.scene);
+			});
+
+			gltfLoader.load('https://raw.githubusercontent.com/amphinomid/subtle/main/assets/tv.glb', function (tv) {
+				tv.scene.scale.set(0.1, 0.1, 0.1);
+				scene.add(tv.scene);
+			});
+
 			// renderer
 			renderer = new THREE.WebGLRenderer({ antialias: true });
 			renderer.setPixelRatio(window.devicePixelRatio);
