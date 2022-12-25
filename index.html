@@ -72,6 +72,11 @@
 				scene.add(room.scene);
 			});
 
+			gltfLoader.load('https://raw.githubusercontent.com/amphinomid/subtle/main/assets/cat.glb', function (cat) {
+				cat.scene.scale.set(0.1, 0.1, 0.1);
+				scene.add(cat.scene);
+			});
+
 			// renderer
 			renderer = new THREE.WebGLRenderer({ antialias: true });
 			renderer.setPixelRatio(window.devicePixelRatio);
