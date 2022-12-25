@@ -94,6 +94,11 @@
 
 			gltfLoader.load('https://raw.githubusercontent.com/amphinomid/subtle/main/assets/table_top.glb', function (table_top) {
 				table_top.scene.scale.set(0.1, 0.1, 0.1);
+				var table_top_obj = table_top.scene.getObjectByName('table_top');
+				table_top_obj.material = new THREE.MeshPhysicalMaterial({
+					roughness: 0.5,
+					transmission: 1,
+				});
 				scene.add(table_top.scene);
 			});
 
