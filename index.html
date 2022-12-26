@@ -6,11 +6,15 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@500&display=swap" rel="stylesheet">
 </head>
 
 <body>
 	<div id="container"></div>
 
+	<!---->
 	<audio autoplay loop id="magenta_lofi">
 		<source src="https://raw.githubusercontent.com/amphinomid/subtle/main/assets/magenta_lofi.m4a"
 			type="audio/mpeg">
@@ -47,7 +51,9 @@
 
 		import { OrbitControls } from '/three/OrbitControls.js';
 
-		let camera, controls, scene, renderer;
+		import { CSS3DRenderer, CSS3DObject } from '/three/CSS3DRenderer.js';
+
+		let camera, controls, scene, css_scene, renderer, css_renderer;
 
 		const container = document.querySelector('#container');
 
@@ -70,6 +76,8 @@
 
 			scene = new THREE.Scene();
 			scene.background = new THREE.Color(0x070112);
+
+			css_scene = new THREE.Scene();
 
 			// Lights
 			const hemiLight = new THREE.HemisphereLight(0xff1f71, 0xffffff, 0.4);
@@ -101,7 +109,7 @@
 				cat_sound.setBuffer(cat_buffer);
 				cat_sound.setLoop(true);
 				cat_sound.setRefDistance(1);
-				cat_sound.setVolume(0.5);
+				cat_sound.setVolume(1);
 				cat_sound.play();
 			});
 			*/
@@ -115,6 +123,20 @@
 				*/
 				scene.add(cat.scene);
 			});
+
+			const mirror_text = document.createElement('div');
+			mirror_text.id = 'mirror_text';
+			mirror_text.textContent = 'body scan mode';
+			mirror_text.style.fontSize = '1rem';
+			mirror_text.style.color = '#fff';
+			mirror_text.style.textShadow = '-0.1rem -0.1rem 0.5rem #fff, 0.1rem 0.1rem 0.5rem #fff, 0 0 2rem #63cf8b, 0 0 4rem #63cf8b, 0 0 6rem #63cf8b';
+			mirror_text.style.webkitUserSelect = 'none';
+			mirror_text.style.userSelect = 'none';
+			const mirror_text_CSS = new CSS3DObject(mirror_text);
+			mirror_text_CSS.scale.set(0.0004, 0.0004, 0.0004);
+			mirror_text_CSS.position.set(0.23, 0.325, 0.3715);
+			mirror_text_CSS.lookAt(0, 0.325, 0.3715);
+			css_scene.add(mirror_text_CSS);
 
 			gltfLoader.load('https://raw.githubusercontent.com/amphinomid/subtle/main/assets/mirror.glb', function (mirror) {
 				mirror.scene.scale.set(0.1, 0.1, 0.1);
@@ -139,7 +161,7 @@
 				speaker_sound.setBuffer(speaker_buffer);
 				speaker_sound.setLoop(true);
 				speaker_sound.setRefDistance(1);
-				speaker_sound.setVolume(0.5);
+				speaker_sound.setVolume(0.25);
 				speaker_sound.play();
 			});
 			*/
@@ -182,8 +204,13 @@
 			renderer.shadowMap.enabled = true;
 			container.appendChild(renderer.domElement);
 
+			// CSS renderer
+			css_renderer = new CSS3DRenderer();
+			css_renderer.setSize(window.innerWidth, window.innerHeight);
+			container.appendChild(css_renderer.domElement);
+
 			// controls
-			controls = new OrbitControls(camera, renderer.domElement);
+			controls = new OrbitControls(camera, css_renderer.domElement);
 			controls.listenToKeyEvents(window);
 			controls.enableDamping = true;
 			controls.dampingFactor = 0.05;
@@ -198,6 +225,7 @@
 			camera.updateProjectionMatrix();
 
 			renderer.setSize(window.innerWidth, window.innerHeight);
+			css_renderer.setSize(window.innerWidth, window.innerHeight);
 		}
 
 		function animate() {
@@ -208,6 +236,7 @@
 
 		function render() {
 			renderer.render(scene, camera);
+			css_renderer.render(css_scene, camera);
 		}
 	</script>
 </body>

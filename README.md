@@ -7,8 +7,10 @@ Credits:
 - Initial experimentation: [GabrielRamirez's threejs-gltf-template](https://github.com/GabrielRamirez/threejs-gltf-template)
 - Later setup: [mrdoob's three.js webgl_loader_draco example](https://github.com/mrdoob/three.js/blob/master/examples/webgl_loader_draco.html)
 - [https://github.com/mrdoob/three.js/blob/master/examples/misc_controls_orbit.html](https://github.com/mrdoob/three.js/blob/master/examples/misc_controls_orbit.html)
-- [DRACOLoader.js](), [GLTFLoader.js](), [OrbitControls.js]() and [three.module.js]() from three.js
+- [CSS3DRenderer.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/renderers/CSS3DRenderer.js), [DRACOLoader.js](), [GLTFLoader.js](), [OrbitControls.js]() and [three.module.js]() from three.js
 - Magenta for the AI lofi music
+- https://codepen.io/GeorgePark/pen/MrjbEr, https://github.com/mrdoob/three.js/blob/master/examples/css3d_periodictable.html
+- Sound Effect from <a href="https://pixabay.com/sound-effects/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=5928">Pixabay</a>
 
 Notes on process, for posterity lol
 - Created model in Blender with colors, textures, lights, etc. and fiddled with it until it looked nice when rendered (in Blender)
