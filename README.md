@@ -12,3 +12,5 @@ Notes on process, for posterity lol
 - Created model in Blender with colors, textures, lights, etc. and fiddled with it until it looked nice when rendered (in Blender)
 - Baked textures in groups (by material), following [this](https://www.youtube.com/watch?v=eYvgFWEiNp8) tutorial
 - Connected baked textures to corresponding materials in shading editor
+
+On Safari, have to go to Menu > Develop > Experimental Features and check WebGL 2.0
