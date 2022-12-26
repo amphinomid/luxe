@@ -27,7 +27,7 @@
 		var magenta_lofi = document.getElementById("magenta_lofi");
 		magenta_lofi.volume = 1;
 		var meow = document.getElementById("meow");
-		meow.volume = 0.25;
+		meow.volume = 0.5;
 	</script>
 
 	<!-- Import maps polyfill -->
@@ -150,6 +150,21 @@
 				scene.add(mirror.scene);
 			});
 
+			const monitor_text = document.createElement('div');
+			monitor_text.id = 'mirror_text';
+			monitor_text.innerHTML = 'WARNING: CHEATING<br><br>Keep your face<br>in view of your webcam.';
+			monitor_text.style.fontSize = '1rem';
+			monitor_text.style.color = '#fff';
+			monitor_text.style.textShadow = '-0.1rem -0.1rem 0.5rem #fff, 0.1rem 0.1rem 0.5rem #fff, 0 0 2rem #f00, 0 0 4rem #f00, 0 0 6rem #f00';
+			monitor_text.style.textAlign = 'center';
+			monitor_text.style.webkitUserSelect = 'none';
+			monitor_text.style.userSelect = 'none';
+			const monitor_text_CSS = new CSS3DObject(monitor_text);
+			monitor_text_CSS.scale.set(0.0005, 0.0005, 0.0005);
+			monitor_text_CSS.position.set(-0.13, 0.22, -0.215);
+			monitor_text_CSS.lookAt(-0.165, 0.275, 0.01);
+			css_scene.add(monitor_text_CSS);
+
 			gltfLoader.load('https://raw.githubusercontent.com/amphinomid/subtle/main/assets/monitor_screen.glb', function (monitor) {
 				monitor.scene.scale.set(0.1, 0.1, 0.1);
 				scene.add(monitor.scene);
@@ -161,7 +176,7 @@
 				speaker_sound.setBuffer(speaker_buffer);
 				speaker_sound.setLoop(true);
 				speaker_sound.setRefDistance(1);
-				speaker_sound.setVolume(0.25);
+				speaker_sound.setVolume(0.5);
 				speaker_sound.play();
 			});
 			*/

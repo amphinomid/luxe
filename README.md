@@ -18,3 +18,5 @@ Notes on process, for posterity lol
 - Connected baked textures to corresponding materials in shading editor
 
 On Safari, have to go to Menu > Develop > Experimental Features and check WebGL 2.0
+
+TODO: CSS3DObjects show through other objects
