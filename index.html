@@ -68,10 +68,17 @@
 			spotLight.position.set(-1, 1, 1);
 			scene.add(spotLight);
 
+			// Audio
+			const listener = new THREE.AudioListener();
+			camera.add(listener);
+			const audioLoader = new THREE.AudioLoader();
+
 			gltfLoader.load('https://raw.githubusercontent.com/amphinomid/subtle/main/assets/room.glb', function (room) {
 				room.scene.scale.set(0.1, 0.1, 0.1);
 				scene.add(room.scene);
 			});
+
+			const cat_sound = new THREE.PositionalAudio(listener);
 
 			gltfLoader.load('https://raw.githubusercontent.com/amphinomid/subtle/main/assets/cat.glb', function (cat) {
 				cat.scene.scale.set(0.1, 0.1, 0.1);
@@ -95,9 +102,19 @@
 				scene.add(monitor.scene);
 			});
 
+			const speaker_sound = new THREE.PositionalAudio(listener);
+			audioLoader.load('https://raw.githubusercontent.com/amphinomid/subtle/main/assets/magenta_lofi.m4a', function (speaker_buffer) {
+				sound.setBuffer(speaker_buffer);
+				sound.setRefDistance(1);
+				sound.play();
+			});
+
 			gltfLoader.load('https://raw.githubusercontent.com/amphinomid/subtle/main/assets/speaker.glb', function (speaker) {
 				speaker.scene.scale.set(0.1, 0.1, 0.1);
-				scene.add(speaker.scene);
+				var speaker_obj = speaker.scene.getObjectByName('speaker');
+				var speaker_mesh = new THREE.Mesh(speaker_obj.geometry, speaker_obj.material);
+				speaker_mesh.add(speaker_sound);
+				scene.add(speaker_mesh);
 			});
 
 			gltfLoader.load('https://raw.githubusercontent.com/amphinomid/subtle/main/assets/table_top.glb', function (table_top) {
