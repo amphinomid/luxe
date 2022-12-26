@@ -79,9 +79,19 @@
 			});
 
 			const cat_sound = new THREE.PositionalAudio(listener);
+			audioLoader.load('https://raw.githubusercontent.com/amphinomid/subtle/main/assets/meow.m4a', function (cat_buffer) {
+				cat_sound.setBuffer(cat_buffer);
+				cat_sound.setLoop(true);
+				cat_sound.setRefDistance(1);
+				cat_sound.setVolume(0.75);
+				cat_sound.play();
+			});
 
 			gltfLoader.load('https://raw.githubusercontent.com/amphinomid/subtle/main/assets/cat.glb', function (cat) {
 				cat.scene.scale.set(0.1, 0.1, 0.1);
+				var cat_obj = cat.scene.getObjectByName('cat_nose');
+				var cat_mesh = new THREE.Mesh(cat_obj.geometry, cat_obj.material);
+				cat_mesh.add(cat_sound);
 				scene.add(cat.scene);
 			});
 
@@ -107,6 +117,7 @@
 				speaker_sound.setBuffer(speaker_buffer);
 				speaker_sound.setLoop(true);
 				speaker_sound.setRefDistance(1);
+				speaker_sound.setVolume(0.5);
 				speaker_sound.play();
 			});
 
