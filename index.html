@@ -104,9 +104,10 @@
 
 			const speaker_sound = new THREE.PositionalAudio(listener);
 			audioLoader.load('https://raw.githubusercontent.com/amphinomid/subtle/main/assets/magenta_lofi.m4a', function (speaker_buffer) {
-				sound.setBuffer(speaker_buffer);
-				sound.setRefDistance(1);
-				sound.play();
+				speaker_sound.setBuffer(speaker_buffer);
+				speaker_sound.setLoop(true);
+				speaker_sound.setRefDistance(1);
+				speaker_sound.play();
 			});
 
 			gltfLoader.load('https://raw.githubusercontent.com/amphinomid/subtle/main/assets/speaker.glb', function (speaker) {
@@ -114,7 +115,7 @@
 				var speaker_obj = speaker.scene.getObjectByName('speaker');
 				var speaker_mesh = new THREE.Mesh(speaker_obj.geometry, speaker_obj.material);
 				speaker_mesh.add(speaker_sound);
-				scene.add(speaker_mesh);
+				scene.add(speaker.scene);
 			});
 
 			gltfLoader.load('https://raw.githubusercontent.com/amphinomid/subtle/main/assets/table_top.glb', function (table_top) {

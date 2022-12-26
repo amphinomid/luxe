@@ -8,6 +8,7 @@ Credits:
 - Later setup: [mrdoob's three.js webgl_loader_draco example](https://github.com/mrdoob/three.js/blob/master/examples/webgl_loader_draco.html)
 - [https://github.com/mrdoob/three.js/blob/master/examples/misc_controls_orbit.html](https://github.com/mrdoob/three.js/blob/master/examples/misc_controls_orbit.html)
 - [DRACOLoader.js](), [GLTFLoader.js](), [OrbitControls.js]() and [three.module.js]() from three.js
+- Magenta for the AI lofi music
 
 Notes on process, for posterity lol
 - Created model in Blender with colors, textures, lights, etc. and fiddled with it until it looked nice when rendered (in Blender)
