@@ -16,8 +16,7 @@
 
 	<!---->
 	<audio autoplay loop id="magenta_lofi">
-		<source src="https://raw.githubusercontent.com/amphinomid/luxe/main/assets/magenta_lofi.m4a"
-			type="audio/mpeg">
+		<source src="https://raw.githubusercontent.com/amphinomid/luxe/main/assets/magenta_lofi.m4a" type="audio/mpeg">
 	</audio>
 	<audio autoplay loop id="meow">
 		<source src="https://raw.githubusercontent.com/amphinomid/luxe/main/assets/meow.m4a" type="audio/mpeg">
@@ -37,8 +36,8 @@
 	<script type="importmap">
 		{
 			"imports": {
-				"three": "/three/three.module.js",
-				"three/addons/": "./jsm/"
+				"three": "https://unpkg.com/three@0.148.0/build/three.module.js",
+				"three/addons/": "https://unpkg.com/three@0.148.0/examples/jsm/"
 			}
 		}
 	</script>
@@ -46,12 +45,12 @@
 	<script type="module">
 		import * as THREE from 'three';
 
-		import { GLTFLoader } from '/three/GLTFLoader.js';
-		import { DRACOLoader } from '/three/DRACOLoader.js';
+		import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+		import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 
-		import { OrbitControls } from '/three/OrbitControls.js';
+		import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
-		import { CSS3DRenderer, CSS3DObject } from '/three/CSS3DRenderer.js';
+		import { CSS3DRenderer, CSS3DObject } from 'three/addons/renderers/CSS3DRenderer.js';
 
 		let camera, controls, scene, css_scene, renderer, css_renderer;
 		let tv_image;

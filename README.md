@@ -29,7 +29,6 @@ Random notes on process:
 - Baked textures in groups, by material, following [this](https://www.youtube.com/watch?v=eYvgFWEiNp8) tutorial
     - 4096x4096, reduce light bounces to speed it up, make sure Image Texture is selected in the shading editor and the dropdown is filled with the relevant image
 - Connected baked textures to corresponding materials in shading editor, exported as .glb
-- Made local copies of three.js code for stuff that required a constructor (the loaders and orbit controls)
+- Switched to using cdn when deploying
 - The CSS objects render on top of the other objects, which is kind of annoying. Experimented with adding image textures to the screens but it was kind of a hassle. Didn't plan ahead for this, but for future projects do this in Blender (e.g. a lot of the screens are static so there's no need to do them in three.js). (TODO: try to find workaround.)
 - On Safari, go to Menu > Develop > Experimental Features and check WebGL 2.0. Although at a certain point it stopped working on Safari entirely (would constantly reload due to energy overuse.) Might be because my laptop is a bit older (?)
-- Deploy isn't working due to local three.js files, take a look at [this](https://threejs.org/docs/#manual/en/introduction/Installation) tomorrow to figure it out (pretty sure the project setup is a mess since I was new to three.js at the time)
