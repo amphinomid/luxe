@@ -3,7 +3,7 @@ An exploration of a surveillance tech-fueled present. The name, concept and refe
 
 I made the 3d models in Blender over winter break 2021. Winter break of this year (2022) I finally got around to transforming them into a web app. (A lot has changed in a year, but a lot has stayed the same. Last year, I named this project "subtle dystopia"; it was intended to be "an exploration of a surveillance tech-fueled future." But as Gilliard [writes](https://www.theatlantic.com/technology/archive/2022/10/amazon-tracking-devices-surveillance-state/671772/) about surveillance tech in *The Atlantic*, "It would be a bit glib—and more than a little clichéd—to call this some kind of technological dystopia. Actually, *dystopia* wouldn't be right, exactly; Dystopian fiction is generally speculative, whereas all of these items and services are real.") I made the images in the piece in Sketch and used three.js for the web stuff.
 
-Use the arrow keys, dragging and pinching/scrolling (zooming) to look around.
+Use the arrow keys, dragging and pinching/scrolling (zooming) to look around. Screenshot below~
 
 (On my computer it works best on Chrome. On Safari it reloads continuously due to energy overuse, but this might be because my computer's old, but there's also a bug with the CSS object displays; going to look into these more in the future. If you try on Safari, be sure to go to Menu > Develop > Experimental Features and check WebGL 2.0.)
 
@@ -35,3 +35,5 @@ Random notes on process:
 - On Safari, go to Menu > Develop > Experimental Features and check WebGL 2.0. Although at a certain point it stopped working on Safari entirely (would constantly reload due to energy overuse.) Might be because my laptop is a bit older (?)
 - On Safari, CSS objects don't display in the correct position. Possibly relevant: [this](https://github.com/mrdoob/three.js/issues/19854)
 - Future work: [computer fan go brrr](https://discourse.threejs.org/t/fans-blowing-up-high-cpu-usage/15949/2)
+
+![A dimly-lit room with various tech gadgets and red-green-blue color scheme](https://raw.githubusercontent.com/amphinomid/luxe/main/assets/screenshot.png)
