@@ -32,6 +32,7 @@ Credits:
 - [Flickering neon lights in CSS (for the monitor and mirror screen contents)](https://codepen.io/GeorgePark/pen/MrjbEr)
 - Incorporating CSS objects: followed [this](https://github.com/mrdoob/three.js/blob/master/examples/css3d_periodictable.html) example
 - Cat meow sound effect from <a href="https://pixabay.com/sound-effects/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=5928">Pixabay</a>
+- Improving performance: followed [this](https://threejs.org/manual/#en/rendering-on-demand) documentation
 
 Random notes on process:
 - Created model in Blender with colors, textures, lights, etc.; fiddled with it until it looked nice when rendered
