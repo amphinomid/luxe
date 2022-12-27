@@ -48,6 +48,7 @@
 
 		import { GLTFLoader } from '/three/GLTFLoader.js';
 		import { DRACOLoader } from '/three/DRACOLoader.js';
+		import { TextureLoader } from '/three/TextureLoader.js';
 
 		import { OrbitControls } from '/three/OrbitControls.js';
 
@@ -65,6 +66,8 @@
 		// Configure GLTF loader.
 		const gltfLoader = new GLTFLoader();
 		gltfLoader.setDRACOLoader(dracoLoader);
+
+		const textureLoader = new TextureLoader();
 
 		init();
 		animate();
@@ -154,9 +157,10 @@
 			monitor_text.id = 'mirror_text';
 			monitor_text.innerHTML = 'WARNING: CHEATING<br><br>Keep your face<br>in view of your webcam.';
 			monitor_text.style.fontSize = '1rem';
-			monitor_text.style.color = '#fff';
-			monitor_text.style.textShadow = '-0.1rem -0.1rem 0.5rem #fff, 0.1rem 0.1rem 0.5rem #fff, 0 0 2rem #f00, 0 0 4rem #f00, 0 0 6rem #f00';
+			monitor_text.style.color = '#f00';
 			monitor_text.style.textAlign = 'center';
+			monitor_text.style.backgroundColor = '#fff';
+			monitor_text.style.padding = '10px';
 			monitor_text.style.webkitUserSelect = 'none';
 			monitor_text.style.userSelect = 'none';
 			const monitor_text_CSS = new CSS3DObject(monitor_text);
