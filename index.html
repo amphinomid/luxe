@@ -48,7 +48,6 @@
 
 		import { GLTFLoader } from '/three/GLTFLoader.js';
 		import { DRACOLoader } from '/three/DRACOLoader.js';
-		import { TextureLoader } from '/three/TextureLoader.js';
 
 		import { OrbitControls } from '/three/OrbitControls.js';
 
@@ -66,8 +65,6 @@
 		// Configure GLTF loader.
 		const gltfLoader = new GLTFLoader();
 		gltfLoader.setDRACOLoader(dracoLoader);
-
-		const textureLoader = new TextureLoader();
 
 		init();
 		animate();
@@ -154,7 +151,7 @@
 			});
 
 			const monitor_text = document.createElement('div');
-			monitor_text.id = 'mirror_text';
+			monitor_text.id = 'monitor_text';
 			monitor_text.innerHTML = 'WARNING: CHEATING<br><br>Keep your face<br>in view of your webcam.';
 			monitor_text.style.fontSize = '1rem';
 			monitor_text.style.color = '#f00';
@@ -209,6 +206,15 @@
 				tablet.scene.scale.set(0.1, 0.1, 0.1);
 				scene.add(tablet.scene);
 			});
+
+			const tv_image = document.createElement('img');
+			tv_image.id = 'tv_image';
+			tv_image.src = 'https://raw.githubusercontent.com/amphinomid/subtle/main/assets/ad1.png';
+			const tv_image_CSS = new CSS3DObject(tv_image);
+			tv_image_CSS.scale.set(0.00033, 0.00033, 0.00033);
+			tv_image_CSS.position.set(0.23, 0.325, 0.2025);
+			tv_image_CSS.lookAt(0, 0.325, 0.2025);
+			css_scene.add(tv_image_CSS);
 
 			gltfLoader.load('https://raw.githubusercontent.com/amphinomid/subtle/main/assets/tv.glb', function (tv) {
 				tv.scene.scale.set(0.1, 0.1, 0.1);
