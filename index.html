@@ -54,6 +54,10 @@
 		import { CSS3DRenderer, CSS3DObject } from '/three/CSS3DRenderer.js';
 
 		let camera, controls, scene, css_scene, renderer, css_renderer;
+		let tv_image;
+		let ad1_src = 'https://raw.githubusercontent.com/amphinomid/subtle/main/assets/ad1.png';
+		let ad2_src = 'https://raw.githubusercontent.com/amphinomid/subtle/main/assets/ad2.png';
+		let ad3_src = 'https://raw.githubusercontent.com/amphinomid/subtle/main/assets/ad3.png';
 
 		const container = document.querySelector('#container');
 
@@ -207,13 +211,13 @@
 				scene.add(tablet.scene);
 			});
 
-			const tv_image = document.createElement('img');
+			tv_image = document.createElement('img');
 			tv_image.id = 'tv_image';
-			tv_image.src = 'https://raw.githubusercontent.com/amphinomid/subtle/main/assets/ad1.png';
+			tv_image.src = ad1_src;
 			const tv_image_CSS = new CSS3DObject(tv_image);
-			tv_image_CSS.scale.set(0.00033, 0.00033, 0.00033);
-			tv_image_CSS.position.set(0.23, 0.325, 0.2025);
-			tv_image_CSS.lookAt(0, 0.325, 0.2025);
+			tv_image_CSS.scale.set(0.0002, 0.0002, 0.0002);
+			tv_image_CSS.position.set(0.23, 0.325, 0.20275);
+			tv_image_CSS.lookAt(0, 0.325, 0.20275);
 			css_scene.add(tv_image_CSS);
 
 			gltfLoader.load('https://raw.githubusercontent.com/amphinomid/subtle/main/assets/tv.glb', function (tv) {
@@ -260,6 +264,16 @@
 		}
 
 		function render() {
+			const timer = Date.now();
+			const modulo_30 = timer % 15000;
+			if (modulo_30 < 5000) {
+				tv_image.src = ad1_src;
+			} else if (modulo_30 < 10000) {
+				tv_image.src = ad2_src;
+			} else {
+				tv_image.src = ad3_src;
+			}
+
 			renderer.render(scene, camera);
 			css_renderer.render(css_scene, camera);
 		}
