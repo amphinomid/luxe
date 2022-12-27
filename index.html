@@ -234,6 +234,30 @@
 				scene.add(tv.scene);
 			});
 
+			let about_link = document.createElement('a');
+			about_link.href = 'https://github.com/amphinomid/luxe/blob/main/README.md';
+			about_link.textContent = 'about';
+			about_link.style.fontSize = '1rem';
+			about_link.style.color = '#fff';
+			about_link.style.textShadow = '-0.1rem -0.1rem 0.5rem #fff, 0.1rem 0.1rem 0.5rem #fff, 0 0 2rem #0035c7, 0 0 4rem #0035c7, 0 0 6rem #0035c7';
+			const about_link_CSS = new CSS3DObject(about_link);
+			about_link_CSS.scale.set(0.0015, 0.0015, 0.0015);
+			about_link_CSS.position.set(-0.1, 0.45, -0.23);
+			about_link_CSS.lookAt(-0.1, 0.45, 0);
+			css_scene.add(about_link_CSS);
+
+			let source_link = document.createElement('a');
+			source_link.href = 'https://github.com/amphinomid/luxe';
+			source_link.textContent = 'source';
+			source_link.style.fontSize = '1rem';
+			source_link.style.color = '#fff';
+			source_link.style.textShadow = '-0.1rem -0.1rem 0.5rem #fff, 0.1rem 0.1rem 0.5rem #fff, 0 0 2rem #0035c7, 0 0 4rem #0035c7, 0 0 6rem #0035c7';
+			const source_link_CSS = new CSS3DObject(source_link);
+			source_link_CSS.scale.set(0.0015, 0.0015, 0.0015);
+			source_link_CSS.position.set(0.23, 0.45,0.1);
+			source_link_CSS.lookAt(0, 0.45, 0.1);
+			css_scene.add(source_link_CSS);
+
 			// renderer
 			renderer = new THREE.WebGLRenderer({ antialias: true });
 			renderer.setPixelRatio(window.devicePixelRatio);

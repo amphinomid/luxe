@@ -5,7 +5,7 @@ I made the 3d models in Blender over winter break 2021. Winter break of this yea
 
 Use the arrow keys, dragging and pinching/scrolling (zooming) to look around.
 
-(On my computer it works best on Chrome. On Safari it reloads continuously due to energy overuse, but this might be because my computer's old; going to look into this more in the future. If you try on Safari, be sure to go to Menu > Develop > Experimental Features and check WebGL 2.0.)
+(On my computer it works best on Chrome. On Safari it reloads continuously due to energy overuse, but this might be because my computer's old, but there's also a bug with the CSS object displays; going to look into these more in the future. If you try on Safari, be sure to go to Menu > Develop > Experimental Features and check WebGL 2.0.)
 
 Inspiration for various parts of the piece:
 - [A Detroit community college professor is fighting Silicon Valley’s surveillance machine. People are listening.](https://www.washingtonpost.com/technology/2021/09/16/chris-gilliard-sees-digital-redlining-in-surveillance-tech/) — Will Oremus for *The Washington Post*
@@ -33,4 +33,5 @@ Random notes on process:
 - Switched to using cdn when deploying
 - The CSS objects render on top of the other objects, which is kind of annoying. Experimented with adding image textures to the screens but it was kind of a hassle. Didn't plan ahead for this, but for future projects do this in Blender (e.g. a lot of the screens are static so there's no need to do them in three.js). (TODO: try to find workaround.)
 - On Safari, go to Menu > Develop > Experimental Features and check WebGL 2.0. Although at a certain point it stopped working on Safari entirely (would constantly reload due to energy overuse.) Might be because my laptop is a bit older (?)
+- On Safari, CSS objects don't display in the correct position. Possibly relevant: [this](https://github.com/mrdoob/three.js/issues/19854)
 - Future work: [computer fan go brrr](https://discourse.threejs.org/t/fans-blowing-up-high-cpu-usage/15949/2)
