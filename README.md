@@ -32,3 +32,4 @@ Random notes on process:
 - Switched to using cdn when deploying
 - The CSS objects render on top of the other objects, which is kind of annoying. Experimented with adding image textures to the screens but it was kind of a hassle. Didn't plan ahead for this, but for future projects do this in Blender (e.g. a lot of the screens are static so there's no need to do them in three.js). (TODO: try to find workaround.)
 - On Safari, go to Menu > Develop > Experimental Features and check WebGL 2.0. Although at a certain point it stopped working on Safari entirely (would constantly reload due to energy overuse.) Might be because my laptop is a bit older (?)
+- Future work: [computer fan go brrr](https://discourse.threejs.org/t/fans-blowing-up-high-cpu-usage/15949/2)
