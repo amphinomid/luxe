@@ -69,8 +69,11 @@
 		const gltfLoader = new GLTFLoader();
 		gltfLoader.setDRACOLoader(dracoLoader);
 
+		let render_requested = false;
+
 		init();
-		animate();
+		render();
+		//animate();
 
 		function init() {
 			camera = new THREE.PerspectiveCamera(35, window.innerWidth / window.innerHeight, 0.1, 15);
@@ -104,6 +107,7 @@
 			gltfLoader.load('https://raw.githubusercontent.com/amphinomid/luxe/main/assets/room.glb', function (room) {
 				room.scene.scale.set(0.1, 0.1, 0.1);
 				scene.add(room.scene);
+				render();
 			});
 
 			/*
@@ -254,7 +258,7 @@
 			source_link.style.textShadow = '-0.1rem -0.1rem 0.5rem #fff, 0.1rem 0.1rem 0.5rem #fff, 0 0 2rem #0035c7, 0 0 4rem #0035c7, 0 0 6rem #0035c7';
 			const source_link_CSS = new CSS3DObject(source_link);
 			source_link_CSS.scale.set(0.0015, 0.0015, 0.0015);
-			source_link_CSS.position.set(0.23, 0.45,0.1);
+			source_link_CSS.position.set(0.23, 0.45, 0.1);
 			source_link_CSS.lookAt(0, 0.45, 0.1);
 			css_scene.add(source_link_CSS);
 
@@ -274,6 +278,7 @@
 			// controls
 			controls = new OrbitControls(camera, css_renderer.domElement);
 			controls.listenToKeyEvents(window);
+			controls.addEventListener('change', requestRenderIfNotRequested);
 			controls.enableDamping = true;
 			controls.dampingFactor = 0.05;
 			controls.screenSpacePanning = false;
@@ -297,6 +302,8 @@
 		}
 
 		function render() {
+			render_requested = false;
+
 			const timer = Date.now();
 			const modulo_30 = timer % 15000;
 			if (modulo_30 < 5000) {
@@ -307,8 +314,16 @@
 				tv_image.src = ad3_src;
 			}
 
+			controls.update();
 			renderer.render(scene, camera);
 			css_renderer.render(css_scene, camera);
+		}
+
+		function requestRenderIfNotRequested() {
+			if (!render_requested) {
+				render_requested = true;
+				requestAnimationFrame(render);
+			}
 		}
 	</script>
 </body>
