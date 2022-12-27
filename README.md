@@ -16,6 +16,7 @@ Inspiration for various parts of the piece:
 
 Credits:
 - [The YouTube tutorial series that helped me learn how to use Blender](https://www.youtube.com/watch?v=nIoXOplUvAw)
+- Room design inspired by [Bruno Simon's "My Room in 3D"](https://github.com/brunosimon/my-room-in-3d)
 - Initial three.js experimentation: [GabrielRamirez's threejs-gltf-template](https://github.com/GabrielRamirez/threejs-gltf-template)
 - Later experimentation and project setup: [mrdoob's three.js webgl_loader_draco example](https://github.com/mrdoob/three.js/blob/master/examples/webgl_loader_draco.html)
 - [CSS3DRenderer.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/renderers/CSS3DRenderer.js), [DRACOLoader.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/loaders/DRACOLoader.js), [GLTFLoader.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/loaders/GLTFLoader.js), [OrbitControls.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/controls/OrbitControls.js) and [three.module.js](https://github.com/mrdoob/three.js/blob/dev/build/three.module.js) from three.js
