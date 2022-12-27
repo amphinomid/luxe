@@ -206,6 +206,15 @@
 				scene.add(table_top.scene);
 			});
 
+			let tablet_image = document.createElement('img');
+			tablet_image.id = 'tv_image';
+			tablet_image.src = 'https://raw.githubusercontent.com/amphinomid/subtle/main/assets/doorbell_camp.png';
+			const tablet_image_CSS = new CSS3DObject(tablet_image);
+			tablet_image_CSS.scale.set(0.0002, 0.0002, 0.0002);
+			tablet_image_CSS.position.set(0, 0.2, -0.2);
+			tablet_image_CSS.lookAt(0, 1, -0.2);
+			css_scene.add(tablet_image_CSS);
+
 			gltfLoader.load('https://raw.githubusercontent.com/amphinomid/subtle/main/assets/tablet.glb', function (tablet) {
 				tablet.scene.scale.set(0.1, 0.1, 0.1);
 				scene.add(tablet.scene);
