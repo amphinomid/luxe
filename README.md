@@ -3,6 +3,7 @@ An exploration of a surveillance tech-fueled present. The name, concept and refe
 
 I made the 3d models in Blender over winter break 2021. Winter break of this year (2022) I finally got around to transforming them into a web app. (A lot has changed in a year, but a lot has stayed the same. Last year, I named this project "subtle dystopia"; it was intended to be "an exploration of a surveillance tech-fueled future." But as Gilliard [writes](https://www.theatlantic.com/technology/archive/2022/10/amazon-tracking-devices-surveillance-state/671772/) about surveillance tech in *The Atlantic*, "It would be a bit glib—and more than a little clichéd—to call this some kind of technological dystopia. Actually, *dystopia* wouldn't be right, exactly; Dystopian fiction is generally speculative, whereas all of these items and services are real.") I made the images in the piece in Sketch and used three.js for the web stuff.
 
+- Takes a few seconds to load <3
 - Use the arrow keys, dragging and pinching/scrolling (zooming) to look around. (Screenshot of the room below~)
 - Photosensitivity warning — the CSS objects sometimes flash when rendering.
 - Alt text for the room: Two adjacent grey walls and a grey floor form a corner. The room is awash with dim red-pink light. Along the wall on the left are a lamp in the shape of a small potted tree plant; a glass table with a speaker, tablet (showing a "doorbell cam"), monitor (showing a "WARNING: CHEATING; Keep your face in view of your webcam" message) and a chair; and a blue light in the shape of a cloud. Along the wall on the right are a lofted bed with a blue blanket and red and green pillows, underneath which are two drawers; a shelf with an icosahedron-shaped lamp, a Rubik's cube, two books and slippers; a TV cycling through three fake ads ("no more bad dates," "NEVER COOK AGAIN" and "SELL YOUR DATA YOUR WAY"); and a mirror with glowing text that reads "body scan mode." In the middle of the room is a blob-shaped rug on which a robotic orange cat stands. Above the two walls are links to this repo and its README.
@@ -10,6 +11,7 @@ I made the 3d models in Blender over winter break 2021. Winter break of this yea
 (If you're trying it on Safari, be sure to go to Menu > Develop > Experimental Features and check WebGL 2.0.)
 
 TODOs / bugs:
+- Loading indicator
 - Safari CSS object offset (possibly relevant: [this](https://github.com/mrdoob/three.js/issues/19854))
 - Sound randomly stops playing / doesn't work
 
