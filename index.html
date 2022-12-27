@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>subtle dystopia</title>
+	<title>luxe</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<link rel="stylesheet" href="style.css">
@@ -16,11 +16,11 @@
 
 	<!---->
 	<audio autoplay loop id="magenta_lofi">
-		<source src="https://raw.githubusercontent.com/amphinomid/subtle/main/assets/magenta_lofi.m4a"
+		<source src="https://raw.githubusercontent.com/amphinomid/luxe/main/assets/magenta_lofi.m4a"
 			type="audio/mpeg">
 	</audio>
 	<audio autoplay loop id="meow">
-		<source src="https://raw.githubusercontent.com/amphinomid/subtle/main/assets/meow.m4a" type="audio/mpeg">
+		<source src="https://raw.githubusercontent.com/amphinomid/luxe/main/assets/meow.m4a" type="audio/mpeg">
 	</audio>
 
 	<script>
@@ -55,9 +55,9 @@
 
 		let camera, controls, scene, css_scene, renderer, css_renderer;
 		let tv_image;
-		let ad1_src = 'https://raw.githubusercontent.com/amphinomid/subtle/main/assets/ad1.png';
-		let ad2_src = 'https://raw.githubusercontent.com/amphinomid/subtle/main/assets/ad2.png';
-		let ad3_src = 'https://raw.githubusercontent.com/amphinomid/subtle/main/assets/ad3.png';
+		let ad1_src = 'https://raw.githubusercontent.com/amphinomid/luxe/main/assets/ad1.png';
+		let ad2_src = 'https://raw.githubusercontent.com/amphinomid/luxe/main/assets/ad2.png';
+		let ad3_src = 'https://raw.githubusercontent.com/amphinomid/luxe/main/assets/ad3.png';
 
 		const container = document.querySelector('#container');
 
@@ -102,14 +102,14 @@
 			const audioLoader = new THREE.AudioLoader();
 			*/
 
-			gltfLoader.load('https://raw.githubusercontent.com/amphinomid/subtle/main/assets/room.glb', function (room) {
+			gltfLoader.load('https://raw.githubusercontent.com/amphinomid/luxe/main/assets/room.glb', function (room) {
 				room.scene.scale.set(0.1, 0.1, 0.1);
 				scene.add(room.scene);
 			});
 
 			/*
 			const cat_sound = new THREE.PositionalAudio(listener);
-			audioLoader.load('https://raw.githubusercontent.com/amphinomid/subtle/main/assets/meow.m4a', function (cat_buffer) {
+			audioLoader.load('https://raw.githubusercontent.com/amphinomid/luxe/main/assets/meow.m4a', function (cat_buffer) {
 				cat_sound.setBuffer(cat_buffer);
 				cat_sound.setLoop(true);
 				cat_sound.setRefDistance(1);
@@ -118,7 +118,7 @@
 			});
 			*/
 
-			gltfLoader.load('https://raw.githubusercontent.com/amphinomid/subtle/main/assets/cat.glb', function (cat) {
+			gltfLoader.load('https://raw.githubusercontent.com/amphinomid/luxe/main/assets/cat.glb', function (cat) {
 				cat.scene.scale.set(0.1, 0.1, 0.1);
 				/*
 				var cat_obj = cat.scene.getObjectByName('cat_nose');
@@ -142,7 +142,7 @@
 			mirror_text_CSS.lookAt(0, 0.325, 0.3715);
 			css_scene.add(mirror_text_CSS);
 
-			gltfLoader.load('https://raw.githubusercontent.com/amphinomid/subtle/main/assets/mirror.glb', function (mirror) {
+			gltfLoader.load('https://raw.githubusercontent.com/amphinomid/luxe/main/assets/mirror.glb', function (mirror) {
 				mirror.scene.scale.set(0.1, 0.1, 0.1);
 				var mirror_obj = mirror.scene.getObjectByName('mirror');
 				mirror_obj.material = new THREE.MeshPhysicalMaterial({
@@ -170,14 +170,14 @@
 			monitor_text_CSS.lookAt(-0.165, 0.275, 0.01);
 			css_scene.add(monitor_text_CSS);
 
-			gltfLoader.load('https://raw.githubusercontent.com/amphinomid/subtle/main/assets/monitor_screen.glb', function (monitor) {
+			gltfLoader.load('https://raw.githubusercontent.com/amphinomid/luxe/main/assets/monitor_screen.glb', function (monitor) {
 				monitor.scene.scale.set(0.1, 0.1, 0.1);
 				scene.add(monitor.scene);
 			});
 
 			/*
 			const speaker_sound = new THREE.PositionalAudio(listener);
-			audioLoader.load('https://raw.githubusercontent.com/amphinomid/subtle/main/assets/magenta_lofi.m4a', function (speaker_buffer) {
+			audioLoader.load('https://raw.githubusercontent.com/amphinomid/luxe/main/assets/magenta_lofi.m4a', function (speaker_buffer) {
 				speaker_sound.setBuffer(speaker_buffer);
 				speaker_sound.setLoop(true);
 				speaker_sound.setRefDistance(1);
@@ -186,7 +186,7 @@
 			});
 			*/
 
-			gltfLoader.load('https://raw.githubusercontent.com/amphinomid/subtle/main/assets/speaker.glb', function (speaker) {
+			gltfLoader.load('https://raw.githubusercontent.com/amphinomid/luxe/main/assets/speaker.glb', function (speaker) {
 				speaker.scene.scale.set(0.1, 0.1, 0.1);
 				/*
 				var speaker_obj = speaker.scene.getObjectByName('speaker');
@@ -196,7 +196,7 @@
 				scene.add(speaker.scene);
 			});
 
-			gltfLoader.load('https://raw.githubusercontent.com/amphinomid/subtle/main/assets/table_top.glb', function (table_top) {
+			gltfLoader.load('https://raw.githubusercontent.com/amphinomid/luxe/main/assets/table_top.glb', function (table_top) {
 				table_top.scene.scale.set(0.1, 0.1, 0.1);
 				var table_top_obj = table_top.scene.getObjectByName('table_top');
 				table_top_obj.material = new THREE.MeshPhysicalMaterial({
@@ -208,7 +208,7 @@
 
 			let tablet_image = document.createElement('img');
 			tablet_image.id = 'tv_image';
-			tablet_image.src = 'https://raw.githubusercontent.com/amphinomid/subtle/main/assets/doorbell_cam.png';
+			tablet_image.src = 'https://raw.githubusercontent.com/amphinomid/luxe/main/assets/doorbell_cam.png';
 			const tablet_image_CSS = new CSS3DObject(tablet_image);
 			tablet_image_CSS.scale.set(0.0000275, 0.0000275, 0.0000275);
 			tablet_image_CSS.position.set(-0.211, 0.14275, -0.166);
@@ -216,7 +216,7 @@
 			tablet_image_CSS.rotateZ(10 * Math.PI / 180);
 			css_scene.add(tablet_image_CSS);
 
-			gltfLoader.load('https://raw.githubusercontent.com/amphinomid/subtle/main/assets/tablet.glb', function (tablet) {
+			gltfLoader.load('https://raw.githubusercontent.com/amphinomid/luxe/main/assets/tablet.glb', function (tablet) {
 				tablet.scene.scale.set(0.1, 0.1, 0.1);
 				scene.add(tablet.scene);
 			});
@@ -230,7 +230,7 @@
 			tv_image_CSS.lookAt(0, 0.325, 0.205);
 			css_scene.add(tv_image_CSS);
 
-			gltfLoader.load('https://raw.githubusercontent.com/amphinomid/subtle/main/assets/tv.glb', function (tv) {
+			gltfLoader.load('https://raw.githubusercontent.com/amphinomid/luxe/main/assets/tv.glb', function (tv) {
 				tv.scene.scale.set(0.1, 0.1, 0.1);
 				scene.add(tv.scene);
 			});
