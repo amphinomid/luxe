@@ -7,6 +7,11 @@ Use the arrow keys, dragging and pinching/scrolling (zooming) to look around. Sc
 
 (On my computer it works best on Chrome. On Safari it reloads continuously due to energy overuse, but this might be because my computer's old, but there's also a bug with the CSS object displays; going to look into these more in the future. If you try on Safari, be sure to go to Menu > Develop > Experimental Features and check WebGL 2.0.)
 
+TODOs / bugs:
+- Make it less energy-intensive
+- Safari CSS object offset
+- Sound randomly stops playing / doesn't work
+
 Inspiration for various parts of the piece:
 - [A Detroit community college professor is fighting Silicon Valley’s surveillance machine. People are listening.](https://www.washingtonpost.com/technology/2021/09/16/chris-gilliard-sees-digital-redlining-in-surveillance-tech/) — Will Oremus for *The Washington Post*
 - [Surveillance shift: San Francisco pilots program allowing police to live monitor private security cameras](https://www.theguardian.com/us-news/2022/oct/04/san-francisco-police-video-surveillance) — Johana Bhuiyan for *The Guardian*
