@@ -244,6 +244,7 @@
 			about_link.style.fontSize = '1rem';
 			about_link.style.color = '#fff';
 			about_link.style.textShadow = '-0.1rem -0.1rem 0.5rem #fff, 0.1rem 0.1rem 0.5rem #fff, 0 0 2rem #0035c7, 0 0 4rem #0035c7, 0 0 6rem #0035c7';
+			about_link.addEventListener('pointerdown', () => { window.location.href = 'https://github.com/amphinomid/luxe/blob/main/README.md'; });
 			const about_link_CSS = new CSS3DObject(about_link);
 			about_link_CSS.scale.set(0.0015, 0.0015, 0.0015);
 			about_link_CSS.position.set(-0.1, 0.45, -0.23);
@@ -256,6 +257,7 @@
 			source_link.style.fontSize = '1rem';
 			source_link.style.color = '#fff';
 			source_link.style.textShadow = '-0.1rem -0.1rem 0.5rem #fff, 0.1rem 0.1rem 0.5rem #fff, 0 0 2rem #0035c7, 0 0 4rem #0035c7, 0 0 6rem #0035c7';
+			source_link.addEventListener('pointerdown', () => { window.location.href = 'https://github.com/amphinomid/luxe'; });
 			const source_link_CSS = new CSS3DObject(source_link);
 			source_link_CSS.scale.set(0.0015, 0.0015, 0.0015);
 			source_link_CSS.position.set(0.23, 0.45, 0.1);
